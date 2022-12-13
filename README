@@ -1,0 +1,13 @@
+Клонировать репозиторий и перейти в него в командной строке:
+-pip install -r requirements.txt
+-python manage.py makemigrations
+-python manage.py migrate
+-python manage.py createsuperuser
+-python manage.py runserver
+
+Документация для API после установки доступна по адресу:
+-http://127.0.0.1:8000/swagger
+
+Весь основной код по отправке рассылки находитья https://github.com/askerbkvv/rassylka/blob/master/rassylka/tests.py
+
+
