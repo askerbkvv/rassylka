@@ -5,6 +5,11 @@
 -python manage.py createsuperuser
 -python manage.py runserver
 
+
+Для запуска Celery:
+-celery -A fabZ worker -l info
+
+
 Документация для API после установки доступна по адресу:
 -http://127.0.0.1:8000/swagger
 
