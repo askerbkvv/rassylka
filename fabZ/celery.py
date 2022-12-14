@@ -4,19 +4,19 @@ from celery import Celery
 from celery.schedules import crontab
 from dotenv import load_dotenv
 
-load_dotenv()
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_work.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fabZ.settings')
 
 app = Celery(
     'backend',
-    broker=os.getenv('BROKER')
+    broker='redis://redis'
 )
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
-app.conf.broker_url = os.getenv('BROKER_URL')
+app.conf.broker_url = 'redis://redis:6379/0'
 
 app.conf.timezone = 'UTC'
 
 app.autodiscover_tasks()
+

@@ -8,6 +8,6 @@
 Документация для API после установки доступна по адресу:
 -http://127.0.0.1:8000/swagger
 
-Весь основной код по отправке рассылки находитья https://github.com/askerbkvv/rassylka/blob/master/rassylka/tests.py
+Весь основной код по отправке рассылки находитья https://github.com/askerbkvv/rassylka/blob/master/rassylka/tasks.py
 
 

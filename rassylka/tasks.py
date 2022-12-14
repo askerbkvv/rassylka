@@ -5,11 +5,9 @@ import sys
 from datetime import datetime
 
 import requests
-from dotenv import load_dotenv
 
 from .models import Client, Links, Message
 
-load_dotenv()
 
 logging.basicConfig(
     format='%(asctime)s %(name)s %(levelname)s  %(message)s',
@@ -21,7 +19,7 @@ logger.setLevel(logging.DEBUG)
 
 RETRY_TIME = 10
 TIME_FORMAT = "%Y-%m-%d - %H:%M:%S"
-SENDING_API_TOKEN = os.getenv('SENDING_API_TOKEN')
+SENDING_API_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDIwMzU5ODcsImlzcyI6ImZhYnJpcXVlIiwibmFtZSI6ImFza2VyYmt2diJ9.LjMsppO-oXzTn8cwMqTZ9WslEko7h9DdBQcDXUIci5E'
 
 
 class MissingValueException(Exception):
@@ -90,3 +88,5 @@ def start_links():
             logger.error(f'Сбой в работе: {error}')
             logger.debug('-----------------')
             time.sleep(RETRY_TIME)
+
+
